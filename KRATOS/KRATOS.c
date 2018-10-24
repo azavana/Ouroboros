@@ -13,7 +13,7 @@ KRATOS: Multiple encryption text program based on RC4A_SPRITZ, SHA 256 and SHA 3
 // Driver program			
 int main (int argc, char **argv)
 {
-	if (argc < 2)
+	if (argc != 2)
 	{
 		printf("\nUsage: %s < Plaintext >\n\n", argv[0]);
 		return -1;
