@@ -1,4 +1,4 @@
-# Kratos
+# Ouroboros
 
 Multiple encryption program based on RC4A (Upadted version of RC4 by Souradyuti Paul and Bart Preneel), Spritz (Updated redesign of RC4 by Ronald Rivest), SHA-512 and SHA-384.
 
