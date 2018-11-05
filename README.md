@@ -10,4 +10,4 @@ Multiple encryption program based on RC4A (Upadted version of RC4 by Souradyuti 
 - 4) Perform SHA-384 (Final stage)
 - 5) Swap the characters of the final stage and output the result
 
-Only the final result is outputted
+# Only the final result is outputted
