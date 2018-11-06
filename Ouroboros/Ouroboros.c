@@ -38,7 +38,7 @@ int main (int argc, char **argv)
 	// Applying SHA-384 on stage2
 	unsigned char *stage3 = malloc(sizeof(unsigned char) * SHA384_DIGEST_LENGTH);
 	assert (stage3 != NULL);
-	stage3 = SHA384(stage2, strlen(stage2), 0); 
+	stage3 = SHA384(stage2, SHA512_DIGEST_LENGTH, 0); 
 
 	printf("All stage completed \n\n");
 	
@@ -52,7 +52,7 @@ int main (int argc, char **argv)
 	
 	for (int y = 0; y < SHA384_DIGEST_LENGTH; y++)
 		printf(Yellow "%02x%c", result[y], y < (SHA384_DIGEST_LENGTH - 1) ? '-' : '\n');
-	printf("\n\n");
+	printf(Reset "\n\n");
 
 
 	return EXIT_SUCCESS;

@@ -7,7 +7,7 @@
 #include "Core.h"
 
 // Key scheduling algorithm
-void KSA (char *key, unsigned char S[256])
+void KSA (unsigned char *key, unsigned char S[256])
 {
 	for (int i = 0; i < 256; i++)
 		S[i] = i;
@@ -67,7 +67,7 @@ void RC4A_SPRITZ (unsigned char S1[256], unsigned char S2[256], unsigned char *p
 	return;
 }
 
-void OUROBOROS_Encrypt (unsigned char *plaintext, char *key, unsigned char *ciphertext)
+void OUROBOROS_Encrypt (unsigned char *plaintext, unsigned char *key, unsigned char *ciphertext)
 {
 	unsigned char S1[256];
 	unsigned char S2[256];
@@ -80,7 +80,7 @@ void OUROBOROS_Encrypt (unsigned char *plaintext, char *key, unsigned char *ciph
 	return;
 }
 
-unsigned char *OUROBOROS_Key() // Generate randomly the key
+unsigned char *OUROBOROS_Key() // Generate randomly the key. Here the key is 256 Bytes long.
 {
 	srand(time(NULL));
 	unsigned char *Key = malloc(sizeof(unsigned char) * 256);
