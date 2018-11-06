@@ -45,10 +45,10 @@ int main (int argc, char **argv)
 	printf(Cyan "[ ENCRYPTED MESSAGE ]\n\n" Reset);
 	printf(">> ");
 	
-	// Swap the characters of stage3 before outputting the result
-	unsigned char *result = malloc(sizeof(unsigned char) * SHA384_DIGEST_LENGTH);
+
+	unsigned char *result = malloc(sizeof(unsigned char) * (SHA384_DIGEST_LENGTH + 1));
 	assert (result != NULL);
-	result = swap_character(stage3);
+	memcpy(result, swap_character(stage3), SHA384_DIGEST_LENGTH + 1);
 	
 	for (int y = 0; y < SHA384_DIGEST_LENGTH; y++)
 		printf(Yellow "%02x%c", result[y], y < (SHA384_DIGEST_LENGTH - 1) ? '-' : '\n');
