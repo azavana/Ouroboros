@@ -4,6 +4,6 @@ Ouroboros.o : Ouroboros.c Core.h Colors.h
 	gcc -c -I. Ouroboros.c -lssl -lcrypto
 Basic_Function.o : Basic_Function.c
 	gcc -c Basic_Function.c
-RC4A_Spirtz.o : RC4A_Spirtz.c Core.h
+RC4A_Spirtz.o : RC4A_Spritz.c Core.h
 	gcc -c RC4A_Spritz.c
 	
